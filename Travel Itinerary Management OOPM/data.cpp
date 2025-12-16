@@ -1,17 +1,59 @@
 #include "data.h"
 #include <iostream>
 #include <fstream>
+#include <algorithm>
 using namespace std;
 
 vector<User> users;
 vector<Itinerary> itineraries;
 
-// ================= LOAD ITINERARIES =================
+
+void suggestItinerary() {
+    if (itineraries.empty()) {
+        cout << "No itineraries available.\n";
+        return;
+    }
+
+    string keyword;
+    cout << "Enter a keyword to search for a trip (e.g., beach, hill, fort): ";
+    cin.ignore(); 
+    getline(cin, keyword);
+
+   
+    transform(keyword.begin(), keyword.end(), keyword.begin(), ::tolower);
+
+    bool found = false;
+    for (auto &it : itineraries) {
+        string titleLower = it.title;
+        transform(titleLower.begin(), titleLower.end(), titleLower.begin(), ::tolower);
+
+        string locLower = it.location;
+        transform(locLower.begin(), locLower.end(), locLower.begin(), ::tolower);
+
+        
+        if (titleLower.find(keyword) != string::npos || locLower.find(keyword) != string::npos) {
+            cout << "\nSuggested Itinerary: " << it.title << " (" << it.days << " Days)\n";
+            cout << "Location: " << it.location << "\n";
+            cout << "Price/Person: INR:- " << it.pricePerPerson << "\n";
+            cout << "Activities:\n";
+            for (auto &act : it.activities)
+                cout << "  " << act << "\n";
+            cout << "Food Options: ";
+            for (auto &f : it.foodOptions)
+                cout << f << " ";
+            cout << "\n-----------------------------------------\n";
+            found = true;
+        }
+    }
+
+    if (!found) cout << "No itineraries match your keyword.\n";
+}
+
 void loadItineraries() {
 
     ifstream in("itineraries.txt");
     if (!in) {
-        // ---------- DEFAULT DATA (FIRST RUN) ----------
+       
         itineraries = {
             {
                 "Goa Beach Escape",
@@ -86,7 +128,7 @@ void loadItineraries() {
             }
         };
 
-        // save default to file
+        
         ofstream out("itineraries.txt");
         out << itineraries.size() << "\n";
         for (auto &it : itineraries) {
@@ -101,7 +143,7 @@ void loadItineraries() {
         return;
     }
 
-    // ---------- LOAD FROM FILE ----------
+    
     itineraries.clear();
     int n;
     in >> n;
@@ -137,7 +179,7 @@ void loadItineraries() {
     in.close();
 }
 
-// ================= DISPLAY =================
+
 void showItineraries() {
     cout << "\n=========================================\n";
     cout << "        AVAILABLE ITINERARIES\n";
@@ -159,7 +201,7 @@ void showItineraries() {
     }
 }
 
-// ================= AUTH =================
+
 bool signup() {
     User u;
     cout << "Enter Username: ";
@@ -205,3 +247,5 @@ bool login(string &loggedUser) {
     cout << "Invalid login!\n";
     return false;
 }
+
+
