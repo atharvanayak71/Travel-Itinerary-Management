@@ -1,0 +1,63 @@
+5
+Goa Beach Escape
+Goa, India
+5 12000
+5
+Day 1: Beach walk, sunset cruise
+Day 2: Fort Aguada, water sports
+Day 3: Dudhsagar waterfall
+Day 4: Local markets & nightlife
+Day 5: Relaxation & shopping
+3
+Indian
+Chinese
+Italian
+Manali Adventure Trip
+Manali, India
+4 10500
+4
+Day 1: Mall Road & cafes
+Day 2: Solang Valley adventure
+Day 3: Rohtang Pass snow trip
+Day 4: River rafting & shopping
+2
+Indian
+Continental
+Rajasthan Royal Heritage
+Jaipur, Jodhpur, Udaipur
+6 15000
+6
+Day 1: Amber Fort
+Day 2: City Palace
+Day 3: Mehrangarh Fort
+Day 4: Desert safari
+Day 5: Lake Pichola
+Day 6: Shopping
+2
+Rajasthani
+Indian
+Kerala Backwaters Retreat
+Kochi, Munnar, Alleppey
+5 13500
+5
+Day 1: Fort Kochi
+Day 2: Tea gardens
+Day 3: Hill sightseeing
+Day 4: Houseboat stay
+Day 5: Ayurveda relaxation
+2
+South Indian
+Chinese
+Madhya Pradesh Heritage Tour
+Gwalior, Pachmarhi, Indore, Bhopal
+6 14000
+6
+Day 1: Gwalior Fort
+Day 2: Pachmarhi hill station
+Day 3: Bee Falls & caves
+Day 4: Indore food tour
+Day 5: Bhimbetka caves
+Day 6: Sanchi Stupa
+2
+Indian
+Street Food
