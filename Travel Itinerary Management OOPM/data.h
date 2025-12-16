@@ -5,13 +5,13 @@
 #include <vector>
 using namespace std;
 
-// ================= USER =================
+
 struct User {
     string username;
     string password;
 };
 
-// ================= ITINERARY =================
+
 struct Itinerary {
     string title;
     string location;
@@ -21,19 +21,22 @@ struct Itinerary {
     int pricePerPerson;
 };
 
-// ================= FUNCTIONS =================
-// ---- Itinerary ----
+
 void loadItineraries();
 void saveItineraries();      
 void showItineraries();
+void suggestItinerary();
 
-// ---- User ----
+
+
 bool signup();
 bool login(string &loggedUser);
 
-// ================= GLOBAL =================
+
 extern vector<User> users;
 extern vector<Itinerary> itineraries;
 
 #endif
+
+
 
