@@ -100,6 +100,7 @@ int main() {
                     }
                     else {
                         cout << "Invalid choice!\n";
+                        break;
                     }
                 }
             }
@@ -110,8 +111,10 @@ int main() {
         }
         else {
             cout << "Invalid choice!\n";
+            break;
         }
     }
 }
+
 
 
